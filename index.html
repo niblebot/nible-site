@@ -3,20 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nible</title>
+  <title>Nible — Video Data Rate Calculator</title>
   <style>
-    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:#0b1020;color:#f4f7ff;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}
-    .card{max-width:700px;padding:40px;border:1px solid #2b355f;border-radius:18px;background:#121936;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    h1{font-size:52px;margin:0 0 12px;letter-spacing:.5px}
-    p{font-size:19px;line-height:1.6;color:#d8def7}
-    .tag{display:inline-block;margin-top:16px;padding:8px 12px;border-radius:999px;background:#1f2a57;color:#b9c7ff;font-size:13px}
+    :root{
+      --bg:#070b16;
+      --panel:#111a34;
+      --line:#2b3f7a;
+      --txt:#eff3ff;
+      --muted:#b8c5ef;
+      --accent:#78a6ff;
+      --good:#2fe0a5;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:Inter,Segoe UI,Arial,sans-serif;
+      color:var(--txt);
+      background:
+        radial-gradient(900px 500px at 10% -10%, #1a2960 0%, transparent 50%),
+        radial-gradient(1000px 600px at 100% 0%, #183b5b 0%, transparent 45%),
+        var(--bg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .wrap{
+      width:min(1000px,100%);
+      display:grid;
+      gap:18px;
+      grid-template-columns:1.1fr .9fr;
+    }
+    @media (max-width: 900px){
+      .wrap{grid-template-columns:1fr}
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)), var(--panel);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 18px 50px rgba(0,0,0,.35);
+      padding:26px;
+    }
+    h1{margin:0 0 8px;font-size:44px;letter-spacing:.4px}
+    .sub{color:var(--muted);font-size:17px;line-height:1.55;margin-bottom:20px}
+    .pill{display:inline-block;padding:7px 11px;border:1px solid #3b5398;border-radius:999px;color:#c9d7ff;font-size:12px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{display:block;font-size:13px;color:#c8d4fb;margin:2px 0 6px}
+    input, select{
+      width:100%;padding:11px 12px;border-radius:10px;
+      border:1px solid #3a4d8e;background:#0d1430;color:#f4f7ff;
+      outline:none;
+    }
+    input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 2px rgba(120,166,255,.2)}
+    .btn{
+      margin-top:14px;width:100%;padding:12px 14px;border:0;border-radius:12px;
+      color:#04132f;background:linear-gradient(90deg,#9fc0ff,#69ddc3);
+      font-weight:700;cursor:pointer;
+    }
+    .out h2{margin:0 0 10px;font-size:20px}
+    .stat{padding:14px;border:1px solid #38508f;background:#0d1430;border-radius:12px;margin-bottom:10px}
+    .k{font-size:12px;color:#adc0f3;text-transform:uppercase;letter-spacing:.08em}
+    .v{font-size:24px;margin-top:4px;font-weight:700}
+    .hint{color:#a8bbea;font-size:13px;line-height:1.45}
+    .good{color:var(--good)}
+    .footer{font-size:12px;color:#9bb0e5;margin-top:10px}
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>nible</h1>
-    <p>Something sharp is coming soon. We're building practical AI tools, growth playbooks, and bite-sized execution systems.</p>
-    <span class="tag">Early access launching soon</span>
-  </main>
+  <div class="wrap">
+    <section class="card">
+      <h1>nible</h1>
+      <p class="sub">Video Data Rate Calculator — quick bitrate + file size estimates for creators and editors.</p>
+      <span class="pill">Live MVP prototype</span>
+
+      <div class="grid" style="margin-top:16px">
+        <div>
+          <label>Resolution</label>
+          <select id="res">
+            <option value="1920x1080">1080p (1920×1080)</option>
+            <option value="2560x1440">1440p (2560×1440)</option>
+            <option value="3840x2160">4K UHD (3840×2160)</option>
+            <option value="7680x4320">8K UHD (7680×4320)</option>
+          </select>
+        </div>
+        <div>
+          <label>Frame Rate (fps)</label>
+          <input id="fps" type="number" min="1" step="1" value="30" />
+        </div>
+        <div>
+          <label>Color Depth (bits)</label>
+          <select id="depth">
+            <option value="8">8-bit</option>
+            <option value="10">10-bit</option>
+            <option value="12">12-bit</option>
+          </select>
+        </div>
+        <div>
+          <label>Chroma Subsampling</label>
+          <select id="chroma">
+            <option value="1.5">4:2:0</option>
+            <option value="2">4:2:2</option>
+            <option value="3">4:4:4</option>
+          </select>
+        </div>
+        <div>
+          <label>Codec Efficiency</label>
+          <select id="codecFactor">
+            <option value="0.06">H.265 / HEVC (high compression)</option>
+            <option value="0.08" selected>H.264 / AVC (balanced)</option>
+            <option value="0.12">ProRes / mezzanine-ish</option>
+            <option value="1">Uncompressed (reference)</option>
+          </select>
+        </div>
+        <div>
+          <label>Duration (minutes)</label>
+          <input id="mins" type="number" min="0.1" step="0.1" value="10" />
+        </div>
+      </div>
+
+      <button class="btn" id="calc">Calculate</button>
+      <p class="footer">Estimates for planning only — actual delivery bitrate varies by scene complexity, encoder settings, and target platform.</p>
+    </section>
+
+    <aside class="card out">
+      <h2>Estimated Output</h2>
+      <div class="stat">
+        <div class="k">Video Data Rate</div>
+        <div class="v" id="rate">— Mbps</div>
+      </div>
+      <div class="stat">
+        <div class="k">Approx. File Size</div>
+        <div class="v" id="size">— GB</div>
+      </div>
+      <div class="stat">
+        <div class="k">Storage per hour</div>
+        <div class="v" id="hour">— GB/h</div>
+      </div>
+      <p class="hint">Tip: for web delivery, try keeping 1080p/30 exports in the <span class="good">6–12 Mbps</span> range and 4K/30 in <span class="good">20–45 Mbps</span>, depending on motion/detail.</p>
+    </aside>
+  </div>
+
+  <script>
+    const $ = id => document.getElementById(id);
+
+    function calc(){
+      const [w,h] = $('res').value.split('x').map(Number);
+      const fps = Number($('fps').value || 0);
+      const depth = Number($('depth').value || 8);
+      const chroma = Number($('chroma').value || 1.5);
+      const codecFactor = Number($('codecFactor').value || 0.08);
+      const mins = Number($('mins').value || 0);
+
+      const rawBitsPerSecond = w * h * fps * depth * chroma;
+      const estBitsPerSecond = rawBitsPerSecond * codecFactor;
+
+      const mbps = estBitsPerSecond / 1_000_000;
+      const totalBits = estBitsPerSecond * mins * 60;
+      const totalGB = totalBits / 8 / 1_000_000_000;
+      const perHourGB = (estBitsPerSecond * 3600) / 8 / 1_000_000_000;
+
+      $('rate').textContent = `${mbps.toFixed(2)} Mbps`;
+      $('size').textContent = `${totalGB.toFixed(2)} GB`;
+      $('hour').textContent = `${perHourGB.toFixed(2)} GB/h`;
+    }
+
+    $('calc').addEventListener('click', calc);
+    ['res','fps','depth','chroma','codecFactor','mins'].forEach(id => $(id).addEventListener('input', calc));
+    calc();
+  </script>
 </body>
 </html>
