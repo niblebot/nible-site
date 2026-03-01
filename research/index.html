@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nible Research Papers</title>
+  <style>
+    body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#060b16;color:#eaf1ff}
+    .wrap{max-width:1100px;margin:0 auto;padding:22px}
+    h1{margin:0 0 8px;font-size:34px}
+    p{color:#a9bde8}
+    .top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:8px 11px;border:1px solid #3c5b99;border-radius:9px;background:#102043;color:#dce8ff;text-decoration:none}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+    .card{background:#0d1731;border:1px solid #2f477b;border-radius:12px;padding:12px}
+    .card h3{margin:0 0 6px;text-transform:capitalize}
+    .count{font-size:12px;color:#99b1e3;margin-bottom:8px}
+    .links{display:flex;flex-direction:column;gap:6px;max-height:260px;overflow:auto;padding-right:4px}
+    .links a{color:#bdd1ff;text-decoration:none;font-size:14px}
+    .links a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>Nible Research Corpus</h1>
+        <p>Modernized indexing of legacy Nible materials. Content preserved, presentation upgraded.</p>
+      </div>
+      <a class="btn" href="/">Back to Institute</a>
+    </div>
+    <div id="out" class="grid"></div>
+  </div>
+  <script>
+    fetch('/research/manifest.json').then(r=>r.json()).then(rows=>{
+      const grouped={};
+      rows.forEach(r=>{ const k=(r.section||'misc').toLowerCase(); (grouped[k]??=[]).push(r); });
+      const out=document.getElementById('out');
+      Object.keys(grouped).sort().forEach(section=>{
+        const items=grouped[section].sort((a,b)=>a.name.localeCompare(b.name));
+        const card=document.createElement('section');
+        card.className='card';
+        card.innerHTML=`<h3>${section}</h3><div class="count">${items.length} papers</div><div class="links"></div>`;
+        const links=card.querySelector('.links');
+        items.forEach(i=>{
+          const a=document.createElement('a');
+          a.href=`/research/reader.html?src=${encodeURIComponent('/'+i.path)}`;
+          a.textContent=i.name.replace(/[-_]/g,' ');
+          links.appendChild(a);
+        });
+        out.appendChild(card);
+      });
+    });
+  </script>
+</body>
+</html>

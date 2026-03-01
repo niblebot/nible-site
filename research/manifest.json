@@ -1,0 +1,452 @@
+[
+    {
+        "path":  "archive/archive/BBC News Online - Front Page_files/ticker.htm",
+        "section":  "archive",
+        "name":  "ticker"
+    },
+    {
+        "path":  "archive/archive/gubai/index.htm",
+        "section":  "archive",
+        "name":  "index"
+    },
+    {
+        "path":  "archive/archive/horace/horace.htm",
+        "section":  "archive",
+        "name":  "horace"
+    },
+    {
+        "path":  "archive/archive/laboratory/default.htm",
+        "section":  "archive",
+        "name":  "default"
+    },
+    {
+        "path":  "archive/archive/laboratory/equinetechnology.htm",
+        "section":  "archive",
+        "name":  "equinetechnology"
+    },
+    {
+        "path":  "archive/archive/stats/default.htm",
+        "section":  "archive",
+        "name":  "default"
+    },
+    {
+        "path":  "archive/archive/stats/default_01_b.htm",
+        "section":  "archive",
+        "name":  "default_01_b"
+    },
+    {
+        "path":  "archive/archive/stats/default_02_b.htm",
+        "section":  "archive",
+        "name":  "default_02_b"
+    },
+    {
+        "path":  "archive/archive/stats/default_03_b.htm",
+        "section":  "archive",
+        "name":  "default_03_b"
+    },
+    {
+        "path":  "archive/archive/stats/default_04_b.htm",
+        "section":  "archive",
+        "name":  "default_04_b"
+    },
+    {
+        "path":  "archive/archive/stats/default_05_b.htm",
+        "section":  "archive",
+        "name":  "default_05_b"
+    },
+    {
+        "path":  "archive/archive/stats/default_06_b.htm",
+        "section":  "archive",
+        "name":  "default_06_b"
+    },
+    {
+        "path":  "archive/archive/stats/default_07_b.htm",
+        "section":  "archive",
+        "name":  "default_07_b"
+    },
+    {
+        "path":  "archive/archive/stats/default_t.htm",
+        "section":  "archive",
+        "name":  "default_t"
+    },
+    {
+        "path":  "archive/archive/stats/home.htm",
+        "section":  "archive",
+        "name":  "home"
+    },
+    {
+        "path":  "archive/archive/test/work.html",
+        "section":  "archive",
+        "name":  "work"
+    },
+    {
+        "path":  "archive/archive/thenible/dark.htm",
+        "section":  "archive",
+        "name":  "dark"
+    },
+    {
+        "path":  "archive/archive/thenible/index.htm",
+        "section":  "archive",
+        "name":  "index"
+    },
+    {
+        "path":  "archive/archive/thenible/poeNtry.htm",
+        "section":  "archive",
+        "name":  "poeNtry"
+    },
+    {
+        "path":  "archive/archive/thenible/space.htm",
+        "section":  "archive",
+        "name":  "space"
+    },
+    {
+        "path":  "archive/archive/thezoo/thezoo.htm",
+        "section":  "archive",
+        "name":  "thezoo"
+    },
+    {
+        "path":  "archive/archive/bbcnews.htm",
+        "section":  "archive",
+        "name":  "bbcnews"
+    },
+    {
+        "path":  "archive/archive/home.htm",
+        "section":  "archive",
+        "name":  "home"
+    },
+    {
+        "path":  "archive/archive/index.htm",
+        "section":  "archive",
+        "name":  "index"
+    },
+    {
+        "path":  "archive/archive/indexold.htm",
+        "section":  "archive",
+        "name":  "indexold"
+    },
+    {
+        "path":  "archive/archive/postinfo.html",
+        "section":  "archive",
+        "name":  "postinfo"
+    },
+    {
+        "path":  "archive/archive/_vti_inf.html",
+        "section":  "archive",
+        "name":  "_vti_inf"
+    },
+    {
+        "path":  "archive/laboratory/9.htm",
+        "section":  "laboratory",
+        "name":  "9"
+    },
+    {
+        "path":  "archive/news/letters.html",
+        "section":  "news",
+        "name":  "letters"
+    },
+    {
+        "path":  "archive/news/naturenews.html",
+        "section":  "news",
+        "name":  "naturenews"
+    },
+    {
+        "path":  "archive/news/naturenews1.html",
+        "section":  "news",
+        "name":  "naturenews1"
+    },
+    {
+        "path":  "archive/news/naturenews2.html",
+        "section":  "news",
+        "name":  "naturenews2"
+    },
+    {
+        "path":  "archive/news/naturenews3.html",
+        "section":  "news",
+        "name":  "naturenews3"
+    },
+    {
+        "path":  "archive/news/newnews.html",
+        "section":  "news",
+        "name":  "newnews"
+    },
+    {
+        "path":  "archive/news/newnews2.html",
+        "section":  "news",
+        "name":  "newnews2"
+    },
+    {
+        "path":  "archive/news/newnews3.html",
+        "section":  "news",
+        "name":  "newnews3"
+    },
+    {
+        "path":  "archive/news/newnews4.html",
+        "section":  "news",
+        "name":  "newnews4"
+    },
+    {
+        "path":  "archive/news/newnews5.html",
+        "section":  "news",
+        "name":  "newnews5"
+    },
+    {
+        "path":  "archive/news/newsindex.html",
+        "section":  "news",
+        "name":  "newsindex"
+    },
+    {
+        "path":  "archive/news/newslab.html",
+        "section":  "news",
+        "name":  "newslab"
+    },
+    {
+        "path":  "archive/news/newslab2.html",
+        "section":  "news",
+        "name":  "newslab2"
+    },
+    {
+        "path":  "archive/news/newslab3.html",
+        "section":  "news",
+        "name":  "newslab3"
+    },
+    {
+        "path":  "archive/news/recipe.html",
+        "section":  "news",
+        "name":  "recipe"
+    },
+    {
+        "path":  "archive/news/report.html",
+        "section":  "news",
+        "name":  "report"
+    },
+    {
+        "path":  "archive/news/report2.html",
+        "section":  "news",
+        "name":  "report2"
+    },
+    {
+        "path":  "archive/news/report3.html",
+        "section":  "news",
+        "name":  "report3"
+    },
+    {
+        "path":  "archive/news/report4.html",
+        "section":  "news",
+        "name":  "report4"
+    },
+    {
+        "path":  "archive/pelican/about.html",
+        "section":  "pelican",
+        "name":  "about"
+    },
+    {
+        "path":  "archive/pelican/contract.html",
+        "section":  "pelican",
+        "name":  "contract"
+    },
+    {
+        "path":  "archive/pelican/head.html",
+        "section":  "pelican",
+        "name":  "head"
+    },
+    {
+        "path":  "archive/pelican/head2.html",
+        "section":  "pelican",
+        "name":  "head2"
+    },
+    {
+        "path":  "archive/pelican/head3.html",
+        "section":  "pelican",
+        "name":  "head3"
+    },
+    {
+        "path":  "archive/pelican/index.html",
+        "section":  "pelican",
+        "name":  "index"
+    },
+    {
+        "path":  "archive/pelican/main.html",
+        "section":  "pelican",
+        "name":  "main"
+    },
+    {
+        "path":  "archive/pelican/permanent.html",
+        "section":  "pelican",
+        "name":  "permanent"
+    },
+    {
+        "path":  "archive/pelican/sidebar.html",
+        "section":  "pelican",
+        "name":  "sidebar"
+    },
+    {
+        "path":  "archive/pelican/sidebar2.html",
+        "section":  "pelican",
+        "name":  "sidebar2"
+    },
+    {
+        "path":  "archive/pelican/sidebar3.html",
+        "section":  "pelican",
+        "name":  "sidebar3"
+    },
+    {
+        "path":  "archive/pelican/vacancies.html",
+        "section":  "pelican",
+        "name":  "vacancies"
+    },
+    {
+        "path":  "archive/pelican/vacancy-contract.html",
+        "section":  "pelican",
+        "name":  "vacancy-contract"
+    },
+    {
+        "path":  "archive/pelican/vacancy-permanent.html",
+        "section":  "pelican",
+        "name":  "vacancy-permanent"
+    },
+    {
+        "path":  "archive/profiles/profile_ed.htm",
+        "section":  "profiles",
+        "name":  "profile_ed"
+    },
+    {
+        "path":  "archive/profiles/profile_frame.html",
+        "section":  "profiles",
+        "name":  "profile_frame"
+    },
+    {
+        "path":  "archive/profiles/profile_pete.htm",
+        "section":  "profiles",
+        "name":  "profile_pete"
+    },
+    {
+        "path":  "archive/profiles/profile_scott.htm",
+        "section":  "profiles",
+        "name":  "profile_scott"
+    },
+    {
+        "path":  "archive/profiles/profile_sidebar.html",
+        "section":  "profiles",
+        "name":  "profile_sidebar"
+    },
+    {
+        "path":  "archive/story/biradel-scroll.html",
+        "section":  "story",
+        "name":  "biradel-scroll"
+    },
+    {
+        "path":  "archive/story/brch1.html",
+        "section":  "story",
+        "name":  "brch1"
+    },
+    {
+        "path":  "archive/story/brch2.html",
+        "section":  "story",
+        "name":  "brch2"
+    },
+    {
+        "path":  "archive/story/brch3.html",
+        "section":  "story",
+        "name":  "brch3"
+    },
+    {
+        "path":  "archive/story/brch4.html",
+        "section":  "story",
+        "name":  "brch4"
+    },
+    {
+        "path":  "archive/story/brch5.html",
+        "section":  "story",
+        "name":  "brch5"
+    },
+    {
+        "path":  "archive/story/brch6.html",
+        "section":  "story",
+        "name":  "brch6"
+    },
+    {
+        "path":  "archive/story/storyindex.html",
+        "section":  "story",
+        "name":  "storyindex"
+    },
+    {
+        "path":  "archive/story/temp.html",
+        "section":  "story",
+        "name":  "temp"
+    },
+    {
+        "path":  "archive/theories/theory1.html",
+        "section":  "theories",
+        "name":  "theory1"
+    },
+    {
+        "path":  "archive/theories/theory10.html",
+        "section":  "theories",
+        "name":  "theory10"
+    },
+    {
+        "path":  "archive/theories/theory11.html",
+        "section":  "theories",
+        "name":  "theory11"
+    },
+    {
+        "path":  "archive/theories/theory12.html",
+        "section":  "theories",
+        "name":  "theory12"
+    },
+    {
+        "path":  "archive/theories/theory2.html",
+        "section":  "theories",
+        "name":  "theory2"
+    },
+    {
+        "path":  "archive/theories/theory3.html",
+        "section":  "theories",
+        "name":  "theory3"
+    },
+    {
+        "path":  "archive/theories/theory4.html",
+        "section":  "theories",
+        "name":  "theory4"
+    },
+    {
+        "path":  "archive/theories/theory5.html",
+        "section":  "theories",
+        "name":  "theory5"
+    },
+    {
+        "path":  "archive/theories/theory6.html",
+        "section":  "theories",
+        "name":  "theory6"
+    },
+    {
+        "path":  "archive/theories/theory7.html",
+        "section":  "theories",
+        "name":  "theory7"
+    },
+    {
+        "path":  "archive/theories/theory8.html",
+        "section":  "theories",
+        "name":  "theory8"
+    },
+    {
+        "path":  "archive/theories/theory9.html",
+        "section":  "theories",
+        "name":  "theory9"
+    },
+    {
+        "path":  "archive/theories/tiindex.htm",
+        "section":  "theories",
+        "name":  "tiindex"
+    },
+    {
+        "path":  "archive/index.html",
+        "section":  null,
+        "name":  "index"
+    },
+    {
+        "path":  "archive/index2.html",
+        "section":  null,
+        "name":  "index2"
+    }
+]
