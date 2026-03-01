@@ -48,6 +48,8 @@
     h1{margin:0 0 8px;font-size:44px;letter-spacing:.4px}
     .sub{color:var(--muted);font-size:17px;line-height:1.55;margin-bottom:20px}
     .pill{display:inline-block;padding:7px 11px;border:1px solid #3b5398;border-radius:999px;color:#c9d7ff;font-size:12px}
+    .mascot{margin:14px 0 4px;border:1px solid #355090;background:#0b1330;border-radius:14px;padding:8px}
+    .mascot svg{width:100%;height:auto;display:block}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     label{display:block;font-size:13px;color:#c8d4fb;margin:2px 0 6px}
     input, select{
@@ -76,6 +78,35 @@
       <h1>nible</h1>
       <p class="sub">Video Data Rate Calculator — quick bitrate + file size estimates for creators and editors.</p>
       <span class="pill">Live MVP prototype</span>
+
+      <div class="mascot" aria-label="Nible calculator mascot">
+        <svg viewBox="0 0 360 180" role="img" aria-label="Anthropomorphic calculator mascot">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#9fc0ff"/>
+              <stop offset="100%" stop-color="#69ddc3"/>
+            </linearGradient>
+          </defs>
+          <rect x="98" y="22" rx="24" ry="24" width="164" height="126" fill="#101a36" stroke="#4e6fc5" stroke-width="3"/>
+          <rect x="118" y="40" rx="10" ry="10" width="124" height="34" fill="#0b1430" stroke="#3d568f"/>
+          <circle cx="157" cy="57" r="7" fill="#eaf1ff"/>
+          <circle cx="203" cy="57" r="7" fill="#eaf1ff"/>
+          <circle cx="159" cy="58" r="2" fill="#1b2f66"/>
+          <circle cx="205" cy="58" r="2" fill="#1b2f66"/>
+          <path d="M166 67 Q180 76 194 67" fill="none" stroke="#76e6c6" stroke-width="3" stroke-linecap="round"/>
+          <g fill="#1a2a5c" stroke="#3d568f">
+            <rect x="122" y="86" width="24" height="16" rx="4"/><rect x="152" y="86" width="24" height="16" rx="4"/><rect x="182" y="86" width="24" height="16" rx="4"/><rect x="212" y="86" width="24" height="16" rx="4"/>
+            <rect x="122" y="108" width="24" height="16" rx="4"/><rect x="152" y="108" width="24" height="16" rx="4"/><rect x="182" y="108" width="24" height="16" rx="4"/><rect x="212" y="108" width="24" height="16" rx="4"/>
+          </g>
+          <path d="M98 82 C72 70,58 70,40 86" stroke="url(#g1)" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <path d="M262 82 C288 70,302 70,320 86" stroke="url(#g1)" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <circle cx="34" cy="90" r="10" fill="#76e6c6"/>
+          <circle cx="326" cy="90" r="10" fill="#76e6c6"/>
+          <path d="M160 18 L170 6 L180 18" fill="none" stroke="#8ab4ff" stroke-width="4" stroke-linecap="round"/>
+          <path d="M180 18 L190 6 L200 18" fill="none" stroke="#8ab4ff" stroke-width="4" stroke-linecap="round"/>
+          <text x="180" y="164" text-anchor="middle" fill="#bcd0ff" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Nib — your bitrate buddy</text>
+        </svg>
+      </div>
 
       <div class="grid" style="margin-top:16px">
         <div>
