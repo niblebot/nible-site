@@ -1,0 +1,68 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="javascript" >
+
+
+            <!--//
+
+            
+             if (document.images) { 
+         
+               butcontractover = new Image(300,41); 
+               butcontractover.src = "gif-bin/butcontractover.gif";
+               buthomeover = new Image(300,12);
+               buthomeover.src = "gif-bin/buthomeover.gif"; 
+	       butpermanentover = new Image(0,0);
+               butpermanentover.src = "gif-bin/butpermanentover.gif";
+                             
+             }
+
+            function rollover(imgname) { 
+             if (document.images) {
+               this.document[imgname].src = eval(imgname+"over.src");
+             }
+            }
+
+
+            function rolloff(imgname) { 
+             if (document.images) {
+                           this.document[imgname].src = "gif-bin/" + imgname + ".gif" ; 
+             }
+            }
+
+            // -->
+
+            
+
+</SCRIPT>
+<title>Sidebar</title>
+</head>
+<body background=gif-bin/background1.gif>
+
+<table border=0>
+	<tr><td>
+	<A HREF="vacancy-contract.html" onMouseover="rollover('butcontract')" 
+	onMouseout="rolloff('butcontract')" target="_top">
+        <IMG SRC="gif-bin/butcontract.gif" border=0 name="butcontract"></A>
+	</td></tr>
+
+	<tr><td>
+	<A HREF="vacancy-permanent.html" onMouseover="rollover('butpermanent')" 
+	onMouseout="rolloff('butpermanent')" target="_top">
+        <IMG SRC="gif-bin/butpermanent.gif" border=0 name="butpermanent"></A>
+	</td></tr>
+
+	<tr><td>
+	<A HREF="index.html" onMouseover="rollover('buthome')" 
+	onMouseout="rolloff('buthome')" target=_top>
+        <IMG SRC="gif-bin/buthome.gif" border=0 name="buthome"></A>
+	</td></tr>
+
+	<tr><td height=250></td></tr>
+	<tr><td><P><center><FORM ACTION=cgi-bin/update-list.cgi>
+<INPUT type=submit value="Update Vacancy List">
+</FORM></center><P>
+</td></tr>
+</table>
+</body>
+</html>

@@ -3,205 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nible — Video Data Rate Calculator</title>
+  <title>NIBLE RESEARCH INSTITUTE // Directive 9</title>
   <style>
     :root{
-      --bg:#070b16;
-      --panel:#111a34;
-      --line:#2b3f7a;
-      --txt:#eff3ff;
-      --muted:#b8c5ef;
-      --accent:#78a6ff;
-      --good:#2fe0a5;
+      --bg:#05080f;
+      --panel:#0d1423;
+      --panel2:#111b31;
+      --line:#29426d;
+      --txt:#eaf0ff;
+      --muted:#9fb3da;
+      --accent:#8ab3ff;
+      --ok:#56f0c2;
+      --warn:#ffd37c;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      min-height:100vh;
       font-family:Inter,Segoe UI,Arial,sans-serif;
       color:var(--txt);
       background:
-        radial-gradient(900px 500px at 10% -10%, #1a2960 0%, transparent 50%),
-        radial-gradient(1000px 600px at 100% 0%, #183b5b 0%, transparent 45%),
+        radial-gradient(1000px 600px at 0% -10%, #102344 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #10283c 0%, transparent 50%),
         var(--bg);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
     }
-    .wrap{
-      width:min(1000px,100%);
-      display:grid;
-      gap:18px;
-      grid-template-columns:1.1fr .9fr;
-    }
-    @media (max-width: 900px){
-      .wrap{grid-template-columns:1fr}
-    }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)), var(--panel);
-      border:1px solid var(--line);
-      border-radius:18px;
-      box-shadow:0 18px 50px rgba(0,0,0,.35);
-      padding:26px;
-    }
-    h1{margin:0 0 8px;font-size:44px;letter-spacing:.4px}
-    .sub{color:var(--muted);font-size:17px;line-height:1.55;margin-bottom:20px}
-    .pill{display:inline-block;padding:7px 11px;border:1px solid #3b5398;border-radius:999px;color:#c9d7ff;font-size:12px}
-    .mascot{margin:14px 0 4px;border:1px solid #355090;background:#0b1330;border-radius:14px;padding:8px}
-    .mascot svg{width:100%;height:auto;display:block}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    label{display:block;font-size:13px;color:#c8d4fb;margin:2px 0 6px}
-    input, select{
-      width:100%;padding:11px 12px;border-radius:10px;
-      border:1px solid #3a4d8e;background:#0d1430;color:#f4f7ff;
-      outline:none;
-    }
-    input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 2px rgba(120,166,255,.2)}
-    .btn{
-      margin-top:14px;width:100%;padding:12px 14px;border:0;border-radius:12px;
-      color:#04132f;background:linear-gradient(90deg,#9fc0ff,#69ddc3);
-      font-weight:700;cursor:pointer;
-    }
-    .out h2{margin:0 0 10px;font-size:20px}
-    .stat{padding:14px;border:1px solid #38508f;background:#0d1430;border-radius:12px;margin-bottom:10px}
-    .k{font-size:12px;color:#adc0f3;text-transform:uppercase;letter-spacing:.08em}
-    .v{font-size:24px;margin-top:4px;font-weight:700}
-    .hint{color:#a8bbea;font-size:13px;line-height:1.45}
-    .good{color:var(--good)}
-    .footer{font-size:12px;color:#9bb0e5;margin-top:10px}
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
+    .top{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}
+    .logo{font-size:28px;font-weight:800;letter-spacing:1.2px}
+    .tag{font-size:12px;border:1px solid #3a578f;color:#c7d8ff;padding:6px 10px;border-radius:999px}
+    .grid{display:grid;grid-template-columns:1.3fr .7fr;gap:16px}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.0)),var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+    .hero h1{font-size:42px;line-height:1.08;margin:0 0 10px}
+    .hero p{color:var(--muted);font-size:17px;line-height:1.55;margin:0 0 14px}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .kpi{background:#0a1120;border:1px solid #2e4678;border-radius:10px;padding:10px}
+    .kpi .k{color:#9eb3e4;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+    .kpi .v{font-size:24px;font-weight:700;margin-top:3px}
+    .sections{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+    @media (max-width:700px){.sections{grid-template-columns:1fr}}
+    .tile{background:var(--panel2);border:1px solid #2c4678;border-radius:12px;padding:12px}
+    .tile h3{margin:0 0 5px;font-size:16px}
+    .tile p{margin:0;color:#a8bce8;font-size:14px;line-height:1.45}
+    .badge{display:inline-block;margin-top:7px;font-size:11px;padding:4px 8px;border-radius:999px;border:1px solid #36558f;color:#c2d3ff}
+    .side h2{margin:0 0 10px;font-size:18px}
+    .list{display:flex;flex-direction:column;gap:8px}
+    .item{background:#0a1120;border:1px solid #2d4677;border-radius:10px;padding:10px}
+    .item .title{font-size:14px;font-weight:600}
+    .item .meta{font-size:12px;color:#9bb0db;margin-top:3px}
+    .ok{color:var(--ok)} .warn{color:var(--warn)}
+    a{color:#b8cbff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .footer{margin-top:14px;color:#8da5d6;font-size:12px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{display:inline-block;padding:10px 12px;border-radius:10px;border:1px solid #44629d;background:#132242;color:#e9f0ff;font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,#95b8ff,#62e0c1);color:#06203b;border-color:transparent}
+    code{font-family:ui-monospace,Consolas,monospace;color:#d6e4ff}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <section class="card">
-      <h1>nible</h1>
-      <p class="sub">Video Data Rate Calculator — quick bitrate + file size estimates for creators and editors.</p>
-      <span class="pill">Live MVP prototype</span>
+    <div class="top">
+      <div class="logo">NIBLE RESEARCH INSTITUTE</div>
+      <div class="tag">Directive Stack: <strong>9.0.9</strong></div>
+    </div>
 
-      <div class="mascot" aria-label="Nible calculator mascot">
-        <svg viewBox="0 0 360 180" role="img" aria-label="Anthropomorphic calculator mascot">
-          <defs>
-            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#9fc0ff"/>
-              <stop offset="100%" stop-color="#69ddc3"/>
-            </linearGradient>
-          </defs>
-          <rect x="98" y="22" rx="24" ry="24" width="164" height="126" fill="#101a36" stroke="#4e6fc5" stroke-width="3"/>
-          <rect x="118" y="40" rx="10" ry="10" width="124" height="34" fill="#0b1430" stroke="#3d568f"/>
-          <circle cx="157" cy="57" r="7" fill="#eaf1ff"/>
-          <circle cx="203" cy="57" r="7" fill="#eaf1ff"/>
-          <circle cx="159" cy="58" r="2" fill="#1b2f66"/>
-          <circle cx="205" cy="58" r="2" fill="#1b2f66"/>
-          <path d="M166 67 Q180 76 194 67" fill="none" stroke="#76e6c6" stroke-width="3" stroke-linecap="round"/>
-          <g fill="#1a2a5c" stroke="#3d568f">
-            <rect x="122" y="86" width="24" height="16" rx="4"/><rect x="152" y="86" width="24" height="16" rx="4"/><rect x="182" y="86" width="24" height="16" rx="4"/><rect x="212" y="86" width="24" height="16" rx="4"/>
-            <rect x="122" y="108" width="24" height="16" rx="4"/><rect x="152" y="108" width="24" height="16" rx="4"/><rect x="182" y="108" width="24" height="16" rx="4"/><rect x="212" y="108" width="24" height="16" rx="4"/>
-          </g>
-          <path d="M98 82 C72 70,58 70,40 86" stroke="url(#g1)" stroke-width="8" stroke-linecap="round" fill="none"/>
-          <path d="M262 82 C288 70,302 70,320 86" stroke="url(#g1)" stroke-width="8" stroke-linecap="round" fill="none"/>
-          <circle cx="34" cy="90" r="10" fill="#76e6c6"/>
-          <circle cx="326" cy="90" r="10" fill="#76e6c6"/>
-          <path d="M160 18 L170 6 L180 18" fill="none" stroke="#8ab4ff" stroke-width="4" stroke-linecap="round"/>
-          <path d="M180 18 L190 6 L200 18" fill="none" stroke="#8ab4ff" stroke-width="4" stroke-linecap="round"/>
-          <text x="180" y="164" text-anchor="middle" fill="#bcd0ff" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Nib — your bitrate buddy</text>
-        </svg>
-      </div>
+    <div class="grid">
+      <section class="card hero">
+        <h1>Quantitative Nine Systems for Civilizational Forecasting</h1>
+        <p>
+          Nible is an independent technical lab advancing the <strong>Doctrine of Nine</strong>: a numerically stable framework
+          for modelling media systems, social entropy, signal collapse, and meme-propagation harmonics.
+          All findings are peer-ignored, aggressively reproducible, and operationally decisive.
+        </p>
 
-      <div class="grid" style="margin-top:16px">
-        <div>
-          <label>Resolution</label>
-          <select id="res">
-            <option value="1920x1080">1080p (1920×1080)</option>
-            <option value="2560x1440">1440p (2560×1440)</option>
-            <option value="3840x2160">4K UHD (3840×2160)</option>
-            <option value="7680x4320">8K UHD (7680×4320)</option>
-          </select>
+        <div class="kpis">
+          <div class="kpi"><div class="k">Active Experiments</div><div class="v">9</div></div>
+          <div class="kpi"><div class="k">Confidence Index</div><div class="v">99.9%</div></div>
+          <div class="kpi"><div class="k">Directive Breaches</div><div class="v">0</div></div>
         </div>
-        <div>
-          <label>Frame Rate (fps)</label>
-          <input id="fps" type="number" min="1" step="1" value="30" />
-        </div>
-        <div>
-          <label>Color Depth (bits)</label>
-          <select id="depth">
-            <option value="8">8-bit</option>
-            <option value="10">10-bit</option>
-            <option value="12">12-bit</option>
-          </select>
-        </div>
-        <div>
-          <label>Chroma Subsampling</label>
-          <select id="chroma">
-            <option value="1.5">4:2:0</option>
-            <option value="2">4:2:2</option>
-            <option value="3">4:4:4</option>
-          </select>
-        </div>
-        <div>
-          <label>Codec Efficiency</label>
-          <select id="codecFactor">
-            <option value="0.06">H.265 / HEVC (high compression)</option>
-            <option value="0.08" selected>H.264 / AVC (balanced)</option>
-            <option value="0.12">ProRes / mezzanine-ish</option>
-            <option value="1">Uncompressed (reference)</option>
-          </select>
-        </div>
-        <div>
-          <label>Duration (minutes)</label>
-          <input id="mins" type="number" min="0.1" step="0.1" value="10" />
-        </div>
-      </div>
 
-      <button class="btn" id="calc">Calculate</button>
-      <p class="footer">Estimates for planning only — actual delivery bitrate varies by scene complexity, encoder settings, and target platform.</p>
-    </section>
+        <div class="sections">
+          <article class="tile">
+            <h3>Protocol N9 // The Nible Canon</h3>
+            <p>Applied numerology for practical decision systems. If it cannot be expressed as a nine-cycle, it is not production-ready.</p>
+            <span class="badge">Canonical Research</span>
+          </article>
+          <article class="tile">
+            <h3>Laboratory Briefings</h3>
+            <p>Technical memos, directed anomalies, and sanctioned pseudo-scientific advisories from the internal laboratory wing.</p>
+            <span class="badge">Field Reports</span>
+          </article>
+          <article class="tile">
+            <h3>Archive Restoration</h3>
+            <p>The original 1998-era Nible data corpus has been recovered and preserved for longitudinal doctrine studies.</p>
+            <span class="badge">Legacy Recovery</span>
+          </article>
+          <article class="tile">
+            <h3>Instrumentation</h3>
+            <p>Utility-grade tools built from research outputs, including bitrate estimators and signal diagnostics.</p>
+            <span class="badge">Operational Tools</span>
+          </article>
+        </div>
 
-    <aside class="card out">
-      <h2>Estimated Output</h2>
-      <div class="stat">
-        <div class="k">Video Data Rate</div>
-        <div class="v" id="rate">— Mbps</div>
-      </div>
-      <div class="stat">
-        <div class="k">Approx. File Size</div>
-        <div class="v" id="size">— GB</div>
-      </div>
-      <div class="stat">
-        <div class="k">Storage per hour</div>
-        <div class="v" id="hour">— GB/h</div>
-      </div>
-      <p class="hint">Tip: for web delivery, try keeping 1080p/30 exports in the <span class="good">6–12 Mbps</span> range and 4K/30 in <span class="good">20–45 Mbps</span>, depending on motion/detail.</p>
-    </aside>
+        <div class="cta">
+          <a class="btn primary" href="/archive/index2.html">Open Legacy Archive</a>
+          <a class="btn" href="mailto:lab@nible.com?subject=Nible%20materials">Submit Research Material</a>
+        </div>
+        <div class="footer">Note: legacy archive intentionally excludes modern editorial revisions. Film wing remains out of current public program.</div>
+      </section>
+
+      <aside class="card side">
+        <h2>System Status</h2>
+        <div class="list">
+          <div class="item">
+            <div class="title">N9 Core Engine</div>
+            <div class="meta"><span class="ok">ONLINE</span> · harmonic lock maintained</div>
+          </div>
+          <div class="item">
+            <div class="title">Anomaly Queue</div>
+            <div class="meta"><span class="warn">PENDING</span> · 9 entries awaiting adjudication</div>
+          </div>
+          <div class="item">
+            <div class="title">Bitrate Instrument</div>
+            <div class="meta"><span class="ok">DEPLOYED</span> · module <code>calc.v9</code> active</div>
+          </div>
+          <div class="item">
+            <div class="title">Archive Corpus</div>
+            <div class="meta"><span class="ok">MOUNTED</span> · <a href="/archive/">browse /archive/</a></div>
+          </div>
+        </div>
+
+        <h2 style="margin-top:14px">Next Suggested Move</h2>
+        <div class="item">
+          <div class="title">Ingest historical email corpus</div>
+          <div class="meta">We can parse old mail into: <code>Directives</code>, <code>Theories</code>, <code>Chronology</code>, <code>Named Entities</code>.</div>
+        </div>
+      </aside>
+    </div>
   </div>
-
-  <script>
-    const $ = id => document.getElementById(id);
-
-    function calc(){
-      const [w,h] = $('res').value.split('x').map(Number);
-      const fps = Number($('fps').value || 0);
-      const depth = Number($('depth').value || 8);
-      const chroma = Number($('chroma').value || 1.5);
-      const codecFactor = Number($('codecFactor').value || 0.08);
-      const mins = Number($('mins').value || 0);
-
-      const rawBitsPerSecond = w * h * fps * depth * chroma;
-      const estBitsPerSecond = rawBitsPerSecond * codecFactor;
-
-      const mbps = estBitsPerSecond / 1_000_000;
-      const totalBits = estBitsPerSecond * mins * 60;
-      const totalGB = totalBits / 8 / 1_000_000_000;
-      const perHourGB = (estBitsPerSecond * 3600) / 8 / 1_000_000_000;
-
-      $('rate').textContent = `${mbps.toFixed(2)} Mbps`;
-      $('size').textContent = `${totalGB.toFixed(2)} GB`;
-      $('hour').textContent = `${perHourGB.toFixed(2)} GB/h`;
-    }
-
-    $('calc').addEventListener('click', calc);
-    ['res','fps','depth','chroma','codecFactor','mins'].forEach(id => $(id).addEventListener('input', calc));
-    calc();
-  </script>
 </body>
 </html>

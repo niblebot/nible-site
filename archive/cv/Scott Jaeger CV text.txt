@@ -1,0 +1,103 @@
+(NB please use edit/wordwrap)
+
+SCOTT JAEGER
+
+68 WESTWAY  RAYNES PARK  LONDON  SW20 9LU
+PHONE 0181 286 9924 MOBILE 0498 805807  E-MAIL SCOTT@INSNET.NET
+
+
+PERSONAL INFORMATION
+
+Birth Date: 26-04-75
+Nationality: British
+Marital status: Single
+
+
+EXPERIENCE AND SKILLS
+
+I have had a variety of project experiences - I managed a migration of my company to Windows NT 4.0 Workstation/Server, implementing policies and profiles over a Windows NT 4.0 domain.  I have built and configured Web servers for corporate clients such as The Financial Times and Cityscan using such equipment as Compaq Proliant Servers.
+
+Knowledge and configuration of Cisco routers as well as support and configuration of 3Com ISDN routers.  Excellent TCP/IP Routing skills.
+
+Unix - I utilise various Unix operating systems such as Sun Solaris and BSDI to perform maintenance and configuration of mail, news, DNS and web servers on our core network.
+
+Excellent knowledge of Networking configuration and protocols and network hardware such as hubs, switches, and cabling.
+
+I have been training towards gaining an MSCE.  I have attended Microsoft accredited courses in Windows NT Administration and Core technologies.  I have also had internal training on TCP/IP, DNS and SMTP mail.
+
+Windows 95/98 - Deep working knowledge.  I have supported it in a 1st and 2nd line capacity.
+
+Practical and support experience of all MS Office 95/97 programs, particularly Word and Excel.  I have created relational databases using MS Access for asset tagging and for storing escalated calls.
+
+Excellent knowledge of all PC hardware, trouble-shooting, upgrading and installation including portables. Also peripheral configuration and installation including network printers, PCMCIA cards and modems.
+
+In depth knowledge and support of Microsoft mail clients such as Ms Exchange, Microsoft Mail, MS Outlook
+
+Hands on configuration of Internet Information Server 3 as well as use of FrontPage 97/98 to create an Intranet at The Microsoft Network.  I have also used Visual Basic 5 and created basic Active X controls.
+
+Support of Microsoft Internet Explorer and Netscape web browsers.
+
+During school I played an active role in the theatre.  This included professional lighting and sound for various productions including plays and concerts.  At University I was the entertainment secretary for my hall.  This involved organising events such as parties and barbecues.  These events also allowed me to demonstrate my talents as a DJ.
+
+
+WORK EXPERIENCE
+
+July 97-present	Internet Network Services	Installation Engineer
+Corporate Internet/Network Service Provider
+I have had 2 concurrent responsibilities at my current employer.  Firstly, supplying 2nd line technical support on a number of different services, such as leased lines, routed isdn, e-mail, web hosting, to clients such as ITN and Barclays Capital.  My role has now changed to the engineering side, configuring and managing the products listed.  My other responsibility is to administer the company LAN (60 users, NT domain, NT/Unix servers), ensuring maximum productivity and minimum downtime for employees.  This has included software and hardware installation and support.
+
+Feb-July 97	The Microsoft Network	Quality Support Professional
+Internet Service Provider
+Various roles within the team which included follow up technical training, formulation of training material and courses, technical research into relevant Internet software and technology, expansion of the existing call floor network and technical call monitoring.  I was also involved with development of tools for the support personnel.
+
+Dec-Feb 1997	The Microsoft Network	Escalation Team
+Internet Service Provider
+2ns/3rd line support for complex and escalated queries that could not be dealt with by normal technical support.
+
+June-Dec 1996	The Microsoft Network	Technical Support Professional
+Internet Service Provider
+Providing telephone and e-mail support for members of The Microsoft Network.  This covered modem/isdn dial up, MS Internet Explorer, MS Exchange/Outlook.
+
+1994 - 1996	Sony Centre	Salesman
+Audio/Visual retailer
+I worked full time during University holidays.  I gained extensive knowledge of Sony's product range and learnt how to run a business.  
+
+1994	Tower Records	Stocktaking
+music retailer
+I briefly worked for Tower records as part of a team, stocktaking.
+
+1994 - 1996	LHS limited	Lighting Engineer
+Theatrical lighting hire
+Drawing from my experience in the theatre at school, I delivered and set up professional lighting equipment.
+
+1992 - 1993	O'Brien Hi-fi	Salesman
+Specialist hi-fi retailer
+I worked as a shop salesman on Saturdays.  This involved demonstrating high-end hi-fi to prospective customers.
+
+
+SUMMARY OF QUALIFICATIONS
+
+3 A Levels in Mathematics, Physics and Chemistry
+10 GCSEs in English, English Literature, Mathematics, Additional Mathematics, Chemistry, Biology, Physics, French, Classical Civilisations, Music and Geography.
+
+EDUCATION
+
+1993 - 1996 Leeds University (Department of Electronic Engineering)
+1988 - 1993 King's College School, Wimbledon
+1982 - 1988 Rokeby School, Kingston Upon Thames
+
+REFERENCES 
+
+Richard Almedia.  Technical Director of Internet Network Services.  Telephone 0181 239 5000.
+Anders Licht.  Former head of Microsoft Network Technical Support.  Telephone 0181 225 7083.
+
+INTERESTS AND ACTIVITIES
+
+I enjoy listening to music and watching films and have built my own home cinema.  I enjoy car audio and have installed high quality systems in my own and in friends' cars. I am also very interested in music production and built up a studio at home.  I have created a number of songs by myself, but have also been part of a band with some success through playing concerts around London.
+
+I enjoy bowling and have recently joined a fitness club where I enjoy swimming and training.
+
+LICENCES
+
+I have held a clean driving licence for 6 years
+ 

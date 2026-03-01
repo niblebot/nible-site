@@ -1,0 +1,6 @@
+#Software: Microsoft Internet Information Server 4.0
+#Version: 1.0
+#Date: 2001-11-21 16:33:56
+#Fields: date time c-ip cs-username s-sitename s-computername s-ip cs-method cs-uri-stem cs-uri-query sc-status sc-win32-status sc-bytes cs-bytes time-taken s-port cs-version cs(User-Agent) cs(Cookie) cs(Referer)
+2001-11-21 16:33:56 217.33.60.204 - W3SVC349 VNT32.NJ2 205.178.159.5 GET /thenible/poeNtry.htm - 200 0 18666 189 532 80 HTTP/1.1 HenryTheMiragoRobot - http://www.mirago.co.uk/scripts/mrinfo.asp
+2001-11-21 16:55:00 217.33.60.204 - W3SVC349 VNT32.NJ2 205.178.159.5 GET /thenible/space.htm - 200 0 1500 187 141 80 HTTP/1.1 HenryTheMiragoRobot - http://www.mirago.co.uk/scripts/mrinfo.asp

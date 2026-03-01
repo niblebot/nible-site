@@ -1,0 +1,279 @@
+BODY {
+	BACKGROUND-COLOR: #ffffff
+}
+B {
+	FONT-WEIGHT: bold
+}
+A:link {
+	COLOR: #333366; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #666699; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #cc3300
+}
+A.index:link {
+	FONT-SIZE: 11px; COLOR: #333366
+}
+A.index:visited {
+	FONT-SIZE: 11px; COLOR: #333366
+}
+A.index:hover {
+	COLOR: #cc3300
+}
+.puffboxwide {
+	WIDTH: 230px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, Sans-serif
+}
+.latestreshead {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #9966cc; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.latestrestitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #663399; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.latestressubhead {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.latestrescolortext {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.rescon TD {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; BACKGROUND-COLOR: #cccccc
+}
+.rescon .blank {
+	BACKGROUND-COLOR: #ffffff
+}
+.rescon .preresult {
+	BACKGROUND-COLOR: #ccccff
+}
+.rescon .resconhead {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; BACKGROUND-COLOR: #663399
+}
+.rescon .resconheadhilight {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; BACKGROUND-COLOR: #9966cc
+}
+.rescon .seatswon {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; BACKGROUND-COLOR: #ffffff
+}
+.rescon .head {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.rescon .smallhead {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.rescon .pid0 {
+	BACKGROUND-COLOR: #cccccc
+}
+.rescon .pid1 {
+	BACKGROUND-COLOR: #333399
+}
+.rescon .pid2 {
+	BACKGROUND-COLOR: #cc0000
+}
+.rescon .pid3 {
+	BACKGROUND-COLOR: #ff9900
+}
+.rescon .pid4 {
+	BACKGROUND-COLOR: #ffcc00
+}
+.rescon .pid5 {
+	BACKGROUND-COLOR: #33cc33
+}
+.rescon .pid7 {
+	BACKGROUND-COLOR: #cc6666
+}
+.rescon .pid8 {
+	BACKGROUND-COLOR: #99cc99
+}
+.rescon .pid9 {
+	BACKGROUND-COLOR: #006600
+}
+.rescon .pid11 {
+	BACKGROUND-COLOR: #6666cc
+}
+.rescon .pid12 {
+	BACKGROUND-COLOR: #999999
+}
+.prediction {
+	FONT-SIZE: 14px; COLOR: #663399; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.votenations {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #663399; PADDING-TOP: 4px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.sboardupdate {
+	FONT-SIZE: 11px; COLOR: #663399; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.voteavpuff {
+	FONT-WEIGHT: 700; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.voteavbutton {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 11px; BACKGROUND: #cc99ff; BORDER-LEFT: 0px; WIDTH: 230px; COLOR: #666666; BORDER-BOTTOM: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; TEXT-ALIGN: right
+}
+TD {
+	FONT-FAMILY: Verdana, Arial, Helvetica, Sans-serif
+}
+FONT {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, Sans-serif
+}
+.bodytext {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, Sans-serif
+}
+.headlinestory {
+	FONT-WEIGHT: bold; FONT-SIZE: 130%; PADDING-BOTTOM: 8px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.inlineimage {
+	PADDING-BOTTOM: 6px
+}
+.caption {
+	COLOR: #333333; PADDING-TOP: 2px
+}
+.rhslist {
+	PADDING-BOTTOM: 4px; WIDTH: 170px; FONT-FAMILY: Verdana, Arial, Helvetica, Sans-serif
+}
+.rhshead {
+	FONT-WEIGHT: bold; COLOR: #cc3300; PADDING-TOP: 4px
+}
+.seealsodate {
+	FONT-SIZE: 11px
+}
+.disclaimer {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.promotextbold {
+	FONT-WEIGHT: bold; FONT-SIZE: 90%; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.fromsport {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #999999; PADDING-TOP: 4px
+}
+.box {
+	BACKGROUND: url(/furniture/nothing.gif) #ffffcc; FLOAT: right; WIDTH: 150px; TEXT-ALIGN: left
+}
+.itemsm {
+	PADDING-LEFT: 8px; BACKGROUND: url(/furniture/aro_red_sm2.gif) #ffffcc no-repeat 2px 1px
+}
+.h1 {
+	FONT-SIZE: 124%
+}
+.h2 {
+	FONT-SIZE: 112%
+}
+.h3 {
+	FONT-SIZE: 100%
+}
+.boxhead {
+	PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #333300; FONT-FAMILY: Verdana, Arial, Helvetica, "Sans-serif"
+}
+.boxbody {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #990000; FONT-FAMILY: Verdana, Arial, Helvetica, "Sans-serif"
+}
+.aitem {
+	MARGIN-TOP: 1px; PADDING-LEFT: 12px; BACKGROUND: url(/furniture/aro_blue.gif) #ffffff no-repeat
+}
+.megaitem {
+	MARGIN-TOP: 1px; PADDING-LEFT: 12px; BACKGROUND: url(/furniture/in_depth/mp_aro.gif) #ffffcc no-repeat
+}
+.meganolink {
+	PADDING-LEFT: 2px; COLOR: #999966
+}
+.megawhite {
+	FONT-WEIGHT: bold; COLOR: #ffffff
+}
+.megaheader {
+	PADDING-LEFT: 2px; FONT-WEIGHT: bold; BACKGROUND: #ffffcc; COLOR: #990000; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.newsinvideo {
+	MARGIN-TOP: 1px; PADDING-LEFT: 15px; BACKGROUND: url(/furniture/video_icon.gif) #ffffff no-repeat
+}
+.newsindepth {
+	MARGIN-TOP: 1px; PADDING-LEFT: 15px; BACKGROUND: url(/furniture/indepth_icon.gif) #ffffff no-repeat
+}
+.newsinaudio {
+	MARGIN-TOP: 1px; PADDING-LEFT: 15px; BACKGROUND: url(/furniture/audio_icon.gif) #ffffff no-repeat
+}
+.newsintalkingpoint {
+	MARGIN-TOP: 1px; PADDING-LEFT: 15px; BACKGROUND: url(/furniture/talkingpoint_icon.gif) #ffffff no-repeat
+}
+.alsolist {
+	CLEAR: both
+}
+.avindex {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.alsohead {
+	MARGIN-TOP: 2px; FONT-WEIGHT: bold; FONT-SIZE: 11px; MARGIN-BOTTOM: 2px; COLOR: #666666
+}
+.head {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #cc3300; LINE-HEIGHT: 12px
+}
+.avbutton {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 11px; BACKGROUND: #ffffcc; BORDER-LEFT: 0px; WIDTH: 170px; COLOR: #666666; BORDER-BOTTOM: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; TEXT-ALIGN: right
+}
+.date {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.sectiontitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; COLOR: #cc3300; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.crumbtraila {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; BACKGROUND-COLOR: #cccc99
+}
+.crumbtrailb {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; BACKGROUND-COLOR: #666666
+}
+.footer {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.footerarrow {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #cc3300; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.footerpiping {
+	FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #cc3333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.otherlanguages {
+	FONT-SIZE: 11px; COLOR: #cc6666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.toprightnav {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.puffboxhead {
+	FONT-WEIGHT: 600; FONT-SIZE: 11px; COLOR: #333300; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; BACKGROUND-COLOR: #cccc99
+}
+.wsbottombox {
+	FONT-WEIGHT: bold; FONT-SIZE: 90%; COLOR: #003366; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; BACKGROUND-COLOR: #cccc99
+}
+.rootSectionSelected {
+	FONT-WEIGHT: 600; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; BACKGROUND-COLOR: #999999; TEXT-ALIGN: right
+}
+.rootSection {
+	FONT-WEIGHT: 600; FONT-SIZE: 11px; LINE-HEIGHT: 15px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; LETTER-SPACING: 0px; TEXT-ALIGN: right; TEXT-DECORATION: none
+}
+.sublist {
+	FONT-WEIGHT: 600; FONT-SIZE: 11px; LINE-HEIGHT: 15px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; LETTER-SPACING: 0px; BACKGROUND-COLOR: #cccccc; TEXT-ALIGN: right; TEXT-DECORATION: none
+}
+.cc3300 {
+	BACKGROUND-COLOR: #cc3300
+}
+.cccccc {
+	BACKGROUND-COLOR: #cccccc
+}
+.avbox {
+	FONT-SIZE: 11px; MARGIN-LEFT: 2px; WIDTH: 95px; MARGIN-RIGHT: 2px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; BACKGROUND-COLOR: #ffffcc
+}
+.avtightgrey {
+	FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.avgrey {
+	FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.tighterB {
+	FONT-WEIGHT: 700; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; LETTER-SPACING: -1pt
+}
+.avtext {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
+.tighter {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; LETTER-SPACING: -1pt
+}
+.search {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"
+}
