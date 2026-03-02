@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Nhonic Flap Density Calculator</title>
+  <style>
+    body{margin:0;background:#050b17;color:#eaf1ff;font-family:Inter,Segoe UI,Arial,sans-serif}
+    .wrap{max-width:1100px;margin:0 auto;padding:22px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:8px 12px;border:1px solid #3e5f9d;border-radius:10px;background:#102247;color:#dce8ff;text-decoration:none}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:#0c1630;border:1px solid #2c4678;border-radius:13px;padding:14px}
+    label{display:block;font-size:12px;color:#9bb3e3;margin:8px 0 5px}
+    input,select{width:100%;padding:9px;background:#081022;border:1px solid #2c446f;border-radius:8px;color:#dcebff}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .out{white-space:pre-wrap;line-height:1.55;color:#d3e2ff}
+    .tag{font-size:11px;border:1px solid #38578f;border-radius:999px;padding:4px 8px;color:#b8ccff}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1 style="margin:0">Nhonic Flap Refractive Density Engine</h1>
+      <div style="color:#9bb2e1">Pseudo-scientific calculator for absolutely serious nonsense.</div>
+    </div>
+    <div>
+      <a class="btn" href="/">Home</a>
+      <a class="btn" href="/research/">Research Library</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <section class="card">
+      <div class="tag">Directive-9 Compatible</div>
+      <div class="row">
+        <div><label>Nhonic Flap Curvature (nF°)</label><input id="curv" type="number" value="42.9" step="0.1"></div>
+        <div><label>Photonic Soup Viscosity (μps)</label><input id="visc" type="number" value="7.7" step="0.1"></div>
+      </div>
+      <div class="row">
+        <div><label>Meme Harmonic Phase</label><input id="phase" type="number" value="13" step="1"></div>
+        <div><label>Graviton Confidence (%)</label><input id="grav" type="number" value="99.9" step="0.1"></div>
+      </div>
+      <div class="row">
+        <div><label>Entropy Flavor</label>
+          <select id="flavor"><option>citrus-collapse</option><option>velvet-chaos</option><option>mint-singularity</option><option>burnt-axiom</option></select>
+        </div>
+        <div><label>Triangulation Mode</label>
+          <select id="mode"><option>inverse wobble</option><option>hyper-sinc drift</option><option>recursive lantern</option><option>non-Euclidean shrug</option></select>
+        </div>
+      </div>
+      <div class="row">
+        <div><label>Plasma Gossip Coefficient</label><input id="gossip" type="number" value="5.4" step="0.1"></div>
+        <div><label>Banana Constant (β)</label><input id="banana" type="number" value="1.618" step="0.001"></div>
+      </div>
+      <label>Temporal Drift Window (hours)</label><input id="drift" type="number" value="9" step="1">
+      <div style="margin-top:12px"><button class="btn" onclick="calc()">Compute Nonsense</button></div>
+    </section>
+
+    <section class="card">
+      <h3 style="margin-top:0">Computed Output</h3>
+      <div class="out" id="out">Awaiting input vectors…</div>
+    </section>
+  </div>
+</div>
+
+<script>
+function hash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=(h*16777619)>>>0;}return h;}
+function fmt(n){return Number(n).toLocaleString(undefined,{maximumFractionDigits:6});}
+function calc(){
+  const v={
+    curv:+curv.value, visc:+visc.value, phase:+phase.value, grav:+grav.value,
+    flavor:flavor.value, mode:mode.value, gossip:+gossip.value, banana:+banana.value, drift:+drift.value
+  };
+  const seed=hash(JSON.stringify(v));
+  const wobble=Math.sin(v.curv/3.7)*Math.cos(v.visc/2.1)*(v.grav/100);
+  const refr=(Math.pow(v.banana,2)+v.gossip)*(v.phase+9)*(1+Math.abs(wobble));
+  const nhonicDensity=(refr*v.drift)/(v.visc+0.19);
+  const flapPressure=(nhonicDensity*Math.sqrt(v.curv+1))/9;
+  const chronoLeak=(seed%1000)/37+v.phase*v.banana;
+  const quanta=(Math.log(nhonicDensity+2)*v.grav)/(v.gossip+1);
+  const protocols=["Protocol LANTERN-9","Protocol BRINE-AXIOM","Protocol VELVET-RIFT","Protocol WOBBLE-SAFETY"];
+  const verdicts=["Containment unnecessary; vibes stable.","Escalate to tea-based mitigation.","Deploy mirror cones before dusk.","Suspend calculations during lunar Wi-Fi lag."];
+  const p=protocols[seed%protocols.length];
+  const ver=verdicts[(seed>>3)%verdicts.length];
+
+  out.textContent =
+`Refractive Light Particle Density (Nhonic Flap): ${fmt(nhonicDensity)} nLpd
+Trans-Axial Flap Pressure: ${fmt(flapPressure)} kPa*ish
+Chrono-Leak Delta: ${fmt(chronoLeak)} Δt crumbs/hour
+Pseudo-Quanta Saturation: ${fmt(quanta)} qM
+Entropy Flavor Signature: ${v.flavor}
+Triangulation Mode: ${v.mode}
+
+Recommended Control Protocol: ${p}
+Adjudication Note: ${ver}
+
+Confidence: ${(97 + (seed%29)/10).toFixed(1)}%
+Peer Review Status: aggressively ignored`;
+}
+</script>
+</body>
+</html>
