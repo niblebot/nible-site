@@ -1,56 +1,69 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nible Research Papers</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Nible Research Library</title>
   <style>
-    body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#060b16;color:#eaf1ff}
-    .wrap{max-width:1100px;margin:0 auto;padding:22px}
-    h1{margin:0 0 8px;font-size:34px}
-    p{color:#a9bde8}
-    .top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
-    .btn{display:inline-block;padding:8px 11px;border:1px solid #3c5b99;border-radius:9px;background:#102043;color:#dce8ff;text-decoration:none}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+    body{margin:0;background:#060b16;color:#e9f1ff;font-family:Inter,Segoe UI,Arial,sans-serif}
+    .wrap{max-width:1160px;margin:0 auto;padding:22px}
+    a{color:#bfd2ff;text-decoration:none} a:hover{text-decoration:underline}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .btn{padding:8px 11px;border:1px solid #3b5a95;border-radius:10px;background:#0f2248;color:#dce8ff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:14px}
     .card{background:#0d1731;border:1px solid #2f477b;border-radius:12px;padding:12px}
-    .card h3{margin:0 0 6px;text-transform:capitalize}
-    .count{font-size:12px;color:#99b1e3;margin-bottom:8px}
-    .links{display:flex;flex-direction:column;gap:6px;max-height:260px;overflow:auto;padding-right:4px}
-    .links a{color:#bdd1ff;text-decoration:none;font-size:14px}
-    .links a:hover{text-decoration:underline}
+    .k{font-size:12px;color:#9eb4e3;text-transform:uppercase;letter-spacing:.09em}
+    .v{font-size:30px;font-weight:800}
+    .diagram{margin-top:8px;background:#0a1225;border:1px solid #2a436f;border-radius:10px;padding:8px}
+    .list{margin-top:15px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+    .paper{background:#0b1429;border:1px solid #28406f;border-radius:11px;padding:10px}
+    .paper h4{margin:0 0 6px;font-size:16px}
+    .paper p{margin:0;color:#9fb5e5;font-size:13px;line-height:1.5}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="top">
-      <div>
-        <h1>Nible Research Corpus</h1>
-        <p>Modernized indexing of legacy Nible materials. Content preserved, presentation upgraded.</p>
-      </div>
-      <a class="btn" href="/">Back to Institute</a>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Nible Research Library</h1>
+      <div style="color:#9eb4e3">Modernized papers interface for legacy doctrine, reports, and lab notes.</div>
     </div>
-    <div id="out" class="grid"></div>
+    <a class="btn" href="/">Back to Institute</a>
   </div>
-  <script>
-    fetch('/research/manifest.json').then(r=>r.json()).then(rows=>{
-      const grouped={};
-      rows.forEach(r=>{ const k=(r.section||'misc').toLowerCase(); (grouped[k]??=[]).push(r); });
-      const out=document.getElementById('out');
-      Object.keys(grouped).sort().forEach(section=>{
-        const items=grouped[section].sort((a,b)=>a.name.localeCompare(b.name));
-        const card=document.createElement('section');
-        card.className='card';
-        card.innerHTML=`<h3>${section}</h3><div class="count">${items.length} papers</div><div class="links"></div>`;
-        const links=card.querySelector('.links');
-        items.forEach(i=>{
-          const a=document.createElement('a');
-          a.href=`/research/reader.html?src=${encodeURIComponent('/'+i.path)}`;
-          a.textContent=i.name.replace(/[-_]/g,' ');
-          links.appendChild(a);
-        });
-        out.appendChild(card);
-      });
+
+  <div class="grid" id="stats"></div>
+  <h2 style="margin-top:16px">Papers by Category</h2>
+  <div class="list" id="papers"></div>
+</div>
+<script>
+fetch('/research/data/papers.json').then(r=>r.json()).then(rows=>{
+  const by={}; rows.forEach(x=>(by[x.category]??=[]).push(x));
+  const stats=document.getElementById('stats');
+  Object.keys(by).sort().forEach(cat=>{
+    const c=by[cat].length;
+    const el=document.createElement('section'); el.className='card';
+    el.innerHTML=`<div class='k'>${cat}</div><div class='v'>${c}</div>
+    <div class='diagram'>
+      <svg viewBox='0 0 220 70' width='100%' height='70'>
+      <polyline fill='none' stroke='#8ab3ff' stroke-width='3' points='8,58 55,${60-c*2} 110,${52-c} 160,${58-c*1.5} 212,40' />
+      <line x1='8' y1='60' x2='212' y2='60' stroke='#36568f'/>
+      </svg>
+    </div>`;
+    stats.appendChild(el);
+  });
+
+  const papers=document.getElementById('papers');
+  Object.keys(by).sort().forEach(cat=>{
+    const section=document.createElement('div'); section.className='card';
+    section.innerHTML=`<h3 style='margin:0 0 8px;text-transform:capitalize'>${cat}</h3>`;
+    by[cat].slice(0,18).forEach(p=>{
+      const a=document.createElement('a'); a.href=`/research/paper.html?id=${encodeURIComponent(p.id)}`; a.className='paper';
+      a.innerHTML=`<h4>${p.title}</h4><p>${p.summary}</p>`;
+      section.appendChild(a);
     });
-  </script>
+    papers.appendChild(section);
+  });
+});
+</script>
 </body>
 </html>
