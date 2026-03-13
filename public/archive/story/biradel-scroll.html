@@ -1,0 +1,83 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="javascript" >
+
+
+            <!--//
+
+            
+             if (document.images) { 
+         
+               bookshelf1over = new Image(83,41); bookshelf1over.src = "../gif-bin/gif-story/bookshelf1over.gif";
+               bookshelf2over = new Image(83,41); bookshelf2over.src = "../gif-bin/gif-story/bookshelf2over.gif";
+               bookshelf4over = new Image(83,41); bookshelf4over.src = "../gif-bin/gif-story/bookshelf4over.gif";
+               bookshelf3over = new Image(83,41); bookshelf3over.src = "../gif-bin/gif-story/bookshelf3over.gif";
+               backarrowover = new Image(83,41); backarrowover.src = "../gif-bin/gif-story/backarrowover.gif";
+             }
+
+            function rollover(imgname) { 
+             if (document.images) {
+               this.document[imgname].src = eval(imgname+"over.src");
+             }
+            }
+
+
+            function rolloff(imgname) { 
+             if (document.images) {
+                           this.document[imgname].src = "../gif-bin/gif-story/" + imgname + ".GIF" ; 
+             }
+            }
+
+            // -->
+
+            
+
+</SCRIPT>
+<title>The Stories of the Nible - Biradel</title>
+</head>
+<body background=../gif-bin/gif-story/bookback.gif>
+<p><font face="Times New Roman" size=5 color=#ffffff>
+<center>
+<img src=../gif-bin/gif-story/torch.gif height=35 align=bottom>
+<img src=../gif-bin/gif-story/title-index.gif alt="Nible Tales">
+<img src=../gif-bin/gif-story/torch.gif height=35 align=bottom>
+</font></p>
+</center>
+
+<table border=0>
+
+<tr>
+<table border=0>
+<tr><td valign=top>
+<table border=1>
+<tr><td>
+<A HREF="biradel-scroll.html" onMouseover="rollover('bookshelf1')" 
+	onMouseout="rolloff('bookshelf1')"> <img src=../gif-bin/gif-story/bookshelf1.gif border=0 name="bookshelf1"></a></td></tr>
+<tr><td><A HREF="temp.html" onMouseover="rollover('bookshelf2')" 
+	onMouseout="rolloff('bookshelf2')"> <img src=../gif-bin/gif-story/bookshelf2.gif border=0 name="bookshelf2"></a></td></tr>
+<tr><td><A HREF="temp.html" onMouseover="rollover('bookshelf3')" 
+	onMouseout="rolloff('bookshelf3')"> <img src=../gif-bin/gif-story/bookshelf3.gif border=0 name="bookshelf3"></a></td></tr>
+<tr><td><A HREF="temp.html" onMouseover="rollover('bookshelf4')" 
+	onMouseout="rolloff('bookshelf4')"> <img src=../gif-bin/gif-story/bookshelf4.gif border=0 name="bookshelf4"></a></td></tr>
+</table>
+</td>
+<td width=600>
+<center><img src=../gif-bin/gif-story/scroll-biradel.gif border=0></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<A HREF="../index2.html" onMouseover="rollover('backarrow')" onMouseout="rolloff('backarrow')"><img src=../gif-bin/gif-story/backarrow.gif name="backarrow" border=0 align=top>
+<font face=Arial size=2 color=#ffffff vlink=#ffffff link=#ffffff>Nine Page</td>
+<td><center>
+<a href=brch1.html><img src=../gif-bin/gif-story/book.gif border=0></a><center></td>
+</tr>
+
+<tr>
+<td><font face=arial color=#ffffff size=1>Author: Edward Yu</font></td>
+</tr>
+
+</table>
+</body>
+</html>

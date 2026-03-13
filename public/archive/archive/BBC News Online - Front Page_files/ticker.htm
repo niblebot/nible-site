@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0039)http://news.bbc.co.uk/ticker/ticker.stm -->
+<!-- Ticker version 1.09 --><HTML><HEAD><TITLE>Ticker</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<STYLE type=text/css>A {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #333366; LINE-HEIGHT: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif, "MS sans serif"; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #cc3300
+}
+</STYLE>
+
+<SCRIPT language=JAVASCRIPT>
+<!--
+
+// --- Global variable stuff here
+       var theItemCount;
+       var theCurrentStory;
+       var theCurrentLength;
+       var theStorySummary;
+       var theTargetLink;
+       var theCharacterTimeout;
+       var theStoryTimeout;
+       var theBrowserVersion;
+       var theWidgetOne;
+       var theWidgetTwo;
+       var theSpaceFiller;
+       var theLeadString;
+       var theStoryState;
+
+
+// --- Check for old browser and force applet
+       theBrowserVersion = parseInt(navigator.appVersion);
+
+       if (theBrowserVersion < 4)
+       {
+          location.href = "/ticker/ticker_applet.252.htm";
+       }
+
+
+
+// --- Only run for V4 browsers (check browser again here - some old browsers won't do this inline)
+       function startTicker()
+       {
+          theBrowserVersion = parseInt(navigator.appVersion);
+
+          if (theBrowserVersion < 4)
+          {
+             location.href = "/ticker/ticker_applet.252.htm";
+             return;
+          }
+
+
+
+// ------ Check and fixup incoming data block
+          if(!document.body.children.incoming.children.properties)
+          {
+             document.all.incoming.innerHTML = "<DIV ID=\"properties\"><DIV ID=\"itemcount\">1</DIV></DIV><DIV ID=\"stories\"><DIV ID=\"1\"><DIV ID=\"Summary\">UK news stories online.</DIV><DIV ID=\"SiteLink\">http://news.bbc.co.uk/hi/english/uk/default.htm</DIV><DIV ID=\"UrlLink\"></DIV></DIV></DIV>";
+          }
+
+
+
+// ------ Set up initial values
+          theCharacterTimeout =   50;
+          theStoryTimeout     = 5000;
+          theWidgetOne        =  "_";
+          theWidgetTwo        =  "-";
+
+
+
+// ------ Set up initial values
+          theStoryState       = 1;
+          theItemCount        = document.body.children.incoming.children.properties.children.itemcount.innerText;
+          theCurrentStory     = -1;
+          theCurrentLength    = 0;
+          theLeadString       = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+          theSpaceFiller      = " &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<BR><BR><BR>";
+
+
+// ------ Begin the ticker       
+          runTheTicker();
+       }
+
+
+
+// --- The basic rotate function
+       function runTheTicker()
+       {
+          if(theStoryState == 1)
+          {
+             setupNextStory();
+          }
+
+          if(theCurrentLength != theStorySummary.length)
+          {
+             drawStory();
+          }
+          else
+          {
+             closeOutStory();
+          }
+       }
+
+
+
+// --- Index to next story
+       function setupNextStory()
+       {
+          theStoryState = 0;
+
+          theCurrentStory++;
+
+          theCurrentStory = theCurrentStory % theItemCount;
+          
+          theStorySummary = document.body.children.incoming.children.stories.children[theCurrentStory].children.Summary.innerText;
+
+          theTargetLink   = document.body.children.incoming.children.stories.children[theCurrentStory].children.SiteLink.innerText;
+
+          if(theTargetLink == "")
+          {
+             theTargetLink = document.body.children.incoming.children.stories.children[theCurrentStory].children.UrlLink.innerText;
+          }
+   
+          theCurrentLength = 0;
+
+          document.all.hottext.href = theTargetLink;
+       }
+
+
+
+// --- Draw a teletype line
+       function drawStory()
+       {
+          var myWidget;
+          
+          if((theCurrentLength % 2) == 1)
+          {
+             myWidget = theWidgetOne;
+          }
+          else
+          {
+             myWidget = theWidgetTwo;
+          }
+          document.all.hottext.innerHTML = theLeadString + theStorySummary.substring(0,theCurrentLength) + myWidget + theSpaceFiller;
+          theCurrentLength++;
+          setTimeout("runTheTicker()", theCharacterTimeout);
+       }
+
+
+
+// --- Finalise the item
+       function closeOutStory()
+       {
+          document.all.hottext.innerHTML = theLeadString + theStorySummary + theSpaceFiller;
+          theStoryState = 1;
+          setTimeout("runTheTicker()", theStoryTimeout);
+       }
+       
+       
+       
+//-->
+</SCRIPT>
+
+<META content="MSHTML 5.50.4616.200" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff background=ticker_files/ticker_highlight.gif 
+onload=startTicker();>
+<TABLE cellSpacing=2 cellPadding=1 border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV id=visible><A id=hottext target=_top 
+      href="http://news.bbc.co.uk/"></A></DIV></TD></TR></TBODY></TABLE>
+<DIV id=incoming style="DISPLAY: none"><BR><BR><BR><BR>
+<DIV id=stories>
+<DIV id=1>
+<DIV id=Summary>Two bosses of French insurance giant Axa questioned by police. 
+More soon.</DIV>
+<DIV id=SiteLink>/default.stm</DIV></DIV>
+<DIV id=2>
+<DIV id=Summary>Hong Kong agrees to extradite woman wanted in US for human 
+trafficking.</DIV>
+<DIV 
+id=SiteLink>/hi/english/world/asia-pacific/newsid_1386000/1386474.stm</DIV></DIV>
+<DIV id=3>
+<DIV id=Summary>Court paves way for judicial review into lack of Northern 
+Ireland abortion rights. </DIV>
+<DIV 
+id=SiteLink>/hi/english/uk/northern_ireland/newsid_1385000/1385897.stm</DIV></DIV>
+<DIV id=4>
+<DIV id=Summary>Chirac tells Nato to "rule nothing out" to end Macedonia 
+conflict.</DIV>
+<DIV 
+id=SiteLink>/hi/english/world/europe/newsid_1386000/1386553.stm</DIV></DIV></DIV>
+<DIV id=properties>
+<DIV id=itemcount>4</DIV></DIV></DIV></BODY></HTML>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Nible Research Library</title>
+  <style>
+    body{margin:0;background:#060b16;color:#e9f1ff;font-family:Inter,Segoe UI,Arial,sans-serif}
+    .wrap{max-width:1160px;margin:0 auto;padding:22px}
+    a{color:#bfd2ff;text-decoration:none} a:hover{text-decoration:underline}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .btn{padding:8px 11px;border:1px solid #3b5a95;border-radius:10px;background:#0f2248;color:#dce8ff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:14px}
+    .card{background:#0d1731;border:1px solid #2f477b;border-radius:12px;padding:12px}
+    .k{font-size:12px;color:#9eb4e3;text-transform:uppercase;letter-spacing:.09em}
+    .v{font-size:30px;font-weight:800}
+    .diagram{margin-top:8px;background:#0a1225;border:1px solid #2a436f;border-radius:10px;padding:8px}
+    .list{margin-top:15px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+    .paper{background:#0b1429;border:1px solid #28406f;border-radius:11px;padding:10px}
+    .paper h4{margin:0 0 6px;font-size:16px}
+    .paper p{margin:0;color:#9fb5e5;font-size:13px;line-height:1.5}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Nible Research Library</h1>
+      <div style="color:#9eb4e3">Modernized papers interface for legacy doctrine, reports, and lab notes.</div>
+    </div>
+    <a class="btn" href="/">Back to Institute</a>
+  </div>
+
+  <div class="grid" id="stats"></div>
+  <h2 style="margin-top:16px">Papers by Category</h2>
+  <div class="list" id="papers"></div>
+</div>
+<script>
+fetch('/research/data/papers.json').then(r=>r.json()).then(rows=>{
+  const by={}; rows.forEach(x=>(by[x.category]??=[]).push(x));
+  const stats=document.getElementById('stats');
+  Object.keys(by).sort().forEach(cat=>{
+    const c=by[cat].length;
+    const el=document.createElement('section'); el.className='card';
+    el.innerHTML=`<div class='k'>${cat}</div><div class='v'>${c}</div>
+    <div class='diagram'>
+      <svg viewBox='0 0 220 70' width='100%' height='70'>
+      <polyline fill='none' stroke='#8ab3ff' stroke-width='3' points='8,58 55,${60-c*2} 110,${52-c} 160,${58-c*1.5} 212,40' />
+      <line x1='8' y1='60' x2='212' y2='60' stroke='#36568f'/>
+      </svg>
+    </div>`;
+    stats.appendChild(el);
+  });
+
+  const papers=document.getElementById('papers');
+  Object.keys(by).sort().forEach(cat=>{
+    const section=document.createElement('div'); section.className='card';
+    section.innerHTML=`<h3 style='margin:0 0 8px;text-transform:capitalize'>${cat}</h3>`;
+    by[cat].slice(0,18).forEach(p=>{
+      const a=document.createElement('a'); a.href=`/research/paper.html?id=${encodeURIComponent(p.id)}`; a.className='paper';
+      a.innerHTML=`<h4>${p.title}</h4><p>${p.summary}</p>`;
+      section.appendChild(a);
+    });
+    papers.appendChild(section);
+  });
+});
+</script>
+</body>
+</html>
