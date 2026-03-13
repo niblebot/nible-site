@@ -25,7 +25,7 @@ export default function HomePage() {
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 12 }}>
             <a href="/research/index.html" style={btnPrimary}>Open Research Papers</a>
             <a href="/research/nhonic-calculator.html" style={btn}>Nhonic Flap Calculator</a>
-            <a href="/archive/index.htm" style={btn}>Full Original Archive</a>
+            <a href="/archive/archive/index.htm" style={btn}>Full Original Archive</a>
             <a href="mailto:lab@nible.com?subject=Nible%20materials" style={btn}>Submit Research Material</a>
           </div>
 
