@@ -13,50 +13,45 @@ const images = {
 const copy = {
   heroTitle: 'Step into something different',
   heroText: [
-    'Most showrooms only start selling once a client walks through the door. The right film starts that process long before the visit.',
-    'This is about turning a physical environment into a commercial asset — content that pre-sells the experience, attracts better-fit residential clients and gives Potters a sharper edge before the first conversation even happens.'
+    'With the days getting longer, it’s the right time to start thinking about how your home and garden are used in the months ahead.',
+    'A well-designed space should feel effortless to live in — whether that’s opening up the house to the outside, setting the right atmosphere in the evening, or simply making everything easier to control day to day.',
+    'It’s about creating an environment that works naturally, without needing to think about it.'
   ],
   gardenTitle: 'Visit our Smart Home Garden…',
   gardenText: [
-    'Outdoor living is one of the clearest ways to show the value of integrated design. The Smart Home Garden makes lighting, audio and control feel tangible, helping prospective clients understand not just how it looks, but why it changes how a space is used.',
-    'Captured properly, this becomes more than a showroom feature. It becomes a high-value sales tool that creates stronger first impressions, increases enquiries and helps Potters stand apart from competitors still relying on static photography or generic product-led messaging.'
+    'Outdoor spaces should feel like a continuation of the home.',
+    'As the light changes through the evening, the garden adapts — subtle lighting, carefully balanced audio, and simple control come together to create a space that feels calm and usable at any time.',
+    'Whether you’re entertaining or just relaxing, everything works quietly in the background, allowing you to enjoy the space without interruption.'
   ],
   quarterTitle: 'Project of the Quarter',
   quarterText: [
-    'This project wasn’t about documenting a room. It was about showing how a considered living space can move effortlessly between everyday use and evening entertainment — and why that matters to the client buying into it.',
-    'The detail is in how lighting shapes mood, how technology recedes into the design, and how the user experience feels from one moment to the next. That requires more than a camera on a tripod. It means understanding spatial design, user interaction and how lighting, audio and control systems are actually experienced in the room — then translating that physical experience into digital content that still sells online.'
+    'This quarter’s project is a good example of how considered design and integration can shape how a home is experienced.',
+    'Each element has been carefully planned and brought together — from lighting and audio to the way the system is controlled — creating a space that feels intuitive from the moment it’s used.',
+    'The focus is always on simplicity. Technology is there to support the space, not dominate it.'
   ],
-  showroomTitle: 'Experience innovation at the Potters Home Digital showroom',
+  showroomTitle: 'Home Cinema',
   showroomText: [
-    'The showroom is one of Potters’ strongest commercial assets when it is presented properly. Instead of asking clients to imagine the difference, this content lets them see how multiple systems work together in a real residential environment before they ever book a visit.',
-    'That makes the enquiry warmer, the conversation more informed and the showroom visit more valuable.'
+    'A cinema room is about more than performance — it’s about immersion.',
+    'Every detail, from the acoustics of the room to the way lighting is handled, is designed to support the experience without distraction.',
+    'The result is a space where you can fully settle in, with everything working together to create something that feels complete.'
   ],
-  demoTitle: 'A showroom experience, not a demonstration',
+  demoTitle: 'Audio',
   demoText: [
-    'A strong showroom film does more than record products. It frames Potters as the specialist who understands how these systems are designed, integrated and lived with. The result is content that builds confidence early, qualifies interest more effectively and moves the conversation beyond features into experience, trust and design quality.'
+    'Sound plays an important role in how a space feels.',
+    'Whether it’s background music throughout the day or something more focused, audio is designed to sit naturally within each room — present when you want it, and unobtrusive when you don’t.',
+    'It becomes part of the environment, rather than something separate from it.'
   ],
-  shopTitle: 'Buy Online or Shop In-Store',
+  shopTitle: 'Experience innovation at the Potters Home Digital showroom',
   shopText: [
-    'Not every client begins with a full integration project. For some, the relationship starts with better sound, a better screen or a more reliable system in one part of the home.',
-    'That matters commercially. Product-led content broadens the entry point, supports in-store and online sales, and creates a clearer pathway from smaller purchases to larger residential projects over time.'
+    'The best way to understand what’s possible is to experience it.',
+    'Our showroom is designed to demonstrate how these systems work in real spaces — how they feel, how they respond, and how naturally they fit into everyday life.'
   ],
   becomesTitle: 'What this becomes',
-  becomesText: [
-    'A master showroom film that works on the website, in sales conversations and as a core brand asset.',
-    'Short-form edits for LinkedIn and Instagram that keep the showroom visible and relevant between visits.',
-    'Showroom walkthrough content that helps prospects understand the space before they arrive.',
-    'Technical breakdown clips that explain lighting, audio and control in a way clients can actually grasp.',
-    'An ongoing content pipeline built from the same environment, so this becomes a repeatable system rather than a one-off shoot.'
-  ],
+  becomesText: [],
   impactTitle: 'Commercial impact',
-  impactText: [
-    'Stronger first impressions before client visits. Better-qualified enquiries. More productive showroom conversations. Better close potential from clients who already understand the value before they walk in.',
-    'And beyond the immediate sales cycle, the result is a library of long-term marketing assets Potters can keep using across website, outreach and social content.'
-  ],
+  impactText: [],
   nextTitle: 'Next step',
-  nextText: [
-    'If Potters wants the showroom to work harder commercially, this is the next move: capture it with the same level of thought that went into designing it, then turn that into content that continues selling between visits.'
-  ]
+  nextText: []
 };
 
 function Cta({ label }: { label: string }) {
